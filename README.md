@@ -6,6 +6,7 @@
 '''
 # 准备工作
 '''
+
    1、安装ocotomap
    sudo apt-get install ros-kinetic-octomap-ros #安装octomap
    sudo apt-get install ros-kinetic-octomap-msgs
@@ -18,7 +19,7 @@
    cd ..
    catkin_make
    (这里直接编译可能会提示缺少loam.test.in文件，所以在编译之前/loam_velodyne目录下建立tests文件夹，在/tests文件夹下新建一个loam.test.in空白文件)
-
+   在hector_loam_velodyne.launch第7行插入一句<remap from="/velodyne_points" to="/robot1/points2" />以便与omtb建立联系
    3、确保你下载并安装了omtb，或下载相关数据集
    
 '''
